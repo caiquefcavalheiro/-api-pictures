@@ -6,5 +6,6 @@ const routesPictures = Router();
 
 routesPictures.get("/", pictureController.getPictures);
 routesPictures.post("/", pictureController.postPictures);
+routesPictures.delete("/:id", pictureController.deletePictures);
 
 export default routesPictures;

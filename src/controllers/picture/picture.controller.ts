@@ -9,6 +9,12 @@ class PictureController {
 
   async postPictures(request: Request, response: Response) {
     const picture = await pictureService.postPicture(request, response);
+    return response.status(201).json(picture);
+  }
+
+  async deletePictures(request: Request, response: Response) {
+    const deletePicture = await pictureService.deletePicture(request, response);
+    return response.status(200).json(deletePicture);
   }
 }
 

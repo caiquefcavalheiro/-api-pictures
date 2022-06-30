@@ -10,7 +10,7 @@ export class Picture {
   @PrimaryGeneratedColumn("uuid")
   id?: string;
 
-  @Column({ nullable: false })
+  @Column({ nullable: false, unique: true })
   titulo: string;
 
   @Column({ nullable: false })
